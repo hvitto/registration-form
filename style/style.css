@@ -13,7 +13,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #4ba0b5;
+    background: url(img/wp5679143-black-oled-4k-wallpapers.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    
 }
 
 .container {
@@ -28,8 +31,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #66b8ce;
+    background: transparent;
+    background-position: center;
+    background-size: cover;
+    border: 2px solid rgba(255, 255, 255, 0.151);
+    backdrop-filter: blur(15px);
     padding: 1rem;
+}
+
+.title {
+    display: flex;
 }
 
 .form-image img {
@@ -42,12 +53,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: #f5f5f5;
     padding: 3rem;
 }
 
 .form-header {
-    margin-bottom: 3rem;
+    margin-bottom: 14vh;
     display: flex;
     justify-content: space-between;
 }
@@ -59,14 +70,14 @@ body {
 
 .login-button button {
     border: none;
-    background: #6c63ff;
+    background: #000000e5;
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .login-button button:hover {
-    background: #6b63fff1;
+    background: #000000e5;
 }
 
 .login-button button a {
@@ -80,13 +91,14 @@ body {
     display: block;
     width: 5rem;
     height: 0.3rem;
-    background: #6c63ff;
+    background: #000000e5;
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
 }
 
 .input-group {
+    margin-bottom: 20vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -104,16 +116,16 @@ body {
     padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
+    box-shadow: 1px 1px 6px #0000004b;
     font-size: 0.8rem;
 }
 
 .input-box input:hover {
-    background: #eeeeee75;
+    background: #e7e7e7;
 }
 
 .input-box input:focus-visible {
-    outline: 1px solid #6c63ff;
+    outline: 1px solid #31313157;
 }
 
 .input-box label,
@@ -122,6 +134,7 @@ body {
     font-size: 0.75rem;
     font-weight: 600;
     color: #000000c0;
+    margin-bottom: 8px;
 }
 
 .input-box input::placeholder {
@@ -130,18 +143,20 @@ body {
 
 .gender-group {
     display: flex;
-    justify-content: space-between;
-    margin-top: 0.62rem;
-    padding: 0,6rem;
+    flex-direction: column;
+    margin-top: -10rem;
+    padding: 0.6rem;
 }
 
 .gender-input {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-.gender-input input {
+.gender-input input[type='radio'] {
     margin-right: 0.35rem;
+    accent-color: rgba(41, 41, 41, 0.233);
 }
 
 .gender-input label {
@@ -154,14 +169,16 @@ body {
     width: 100%;
     margin-top: 2.5rem;
     border: none;
-    background: #6c63ff;
+    background: #000000e5;
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: 500ms;
 }
 
 .continue-button button:hover {
-    background: #6b63fff1;
+    transition: 500ms;
+    background: #313131f1;
 }
 
 .continue-button button a {
@@ -171,15 +188,108 @@ body {
     text-decoration: none;
 }
 
+@media screen and (max-width: 1818px) {
+    .form-image {
+        display: flex;
+    }
+    .container {
+        width: 60%;
+    }
+    .form {
+        width: 100%;
+    }
+
+    .form-header {
+        margin-bottom: 8vh;
+    }
+}
+
+@media screen and (max-width: 1740px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 90%;
+    }
+    .form {
+        width: 100%;
+    }
+
+    .form-header {
+        margin-bottom: 8vh;
+    }
+
+    .input-box {
+        margin-right: 2vh;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 60%;
+    }
+    .form {
+        width: 100%;
+    }
+
+    .form-header {
+        margin-bottom: 8vh;
+    }
+}
+
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;
     }
     .container {
-        width: 50%;
+        width: 60%;
     }
     .form {
         width: 100%;
+    }
+
+    .form-header {
+        margin-bottom: 8vh;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 70%;
+    }
+    .form {
+        width: 100%;
+    }
+
+    .form-header {
+        margin-bottom: 8vh;
+    }
+}
+
+@media screen and (max-width: 1211px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 60%;
+    }
+    .form {
+        width: 100%;
+    }
+
+    .form-header {
+        margin-bottom: 8vh;
+    }
+
+    .gender-group {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -187,6 +297,13 @@ body {
     .container {
         width: 90%;
         height: auto;
+    }
+
+    .gender-inputs {
+        margin-top: 15vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 
 .input-group {
@@ -199,15 +316,21 @@ body {
 }
 
 .gender-input {
-    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 0rem;
+    margin-right: 50vh;
 }
 .gender-group {
     flex-direction: column;
 }
-.gender-title h6 {
-    margin: 0;
+.gender-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2vh;
 }
-.gender-input {
-    margin-top: 0.5rem;
-    }
+.continue-button {
+    margin-top: 1px;
+}
 }
